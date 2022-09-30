@@ -6,11 +6,9 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
 ---
 
-<header
-	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm"
->
-	<div class="container mx-auto w-full py-3 px-3">
-		<div class="grid gap-4 grid-cols-3 items-center">
+<header class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm">
+	<div class="container mx-auto w-full p-3">
+		<div class="grid gap-4 grid-cols-3 items-center relative z-40">
 			<div>
 				<ToggleMenu />
 			</div>
@@ -25,39 +23,33 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 				<a href="#" class="font-medium border-2 border-black rounded shadow sm:px-4 lg:px-6 sm:py-2 hover:text-white hover:bg-gray-900 transition">Book Now</a>
 			</div>
 		</div>
-		<nav
-			class="items-center w-full md:w-auto hidden text-gray-900 h-screen"
-			aria-label="Main navigation"
-			id="menu"
-		>
-			<ul
-				class="flex flex-col pt-8 collapse w-full collapsed text-xl"
-			>
+		<nav class="flex items-center justify-center w-full md:w-auto hidden text-gray-900 h-screen mt-[-56px]" aria-label="Main navigation" id="menu">
+			<div class="cursor custom-cursor"></div>
+
+			<ul class="inline-flex justify-center items-center flex-col collapse collapsed text-xl relative z-40">
 				<li>
-					<a
-						class="font-medium hover:text-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href="#">Pages</a
-					>
+					<a class="tap-1 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-1.png" href="#">SALT BAR + KITCHEN</a>
 				</li>
 				<li>
-					<a
-						class="font-medium hover:text-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href={getPermalink('useful-resources-to-create-websites', 'post')}
-						>Resources
-					</a>
+					<a class="tap-2 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-2.png" href="#">SALT TAPROOM</a>
 				</li>
 				<li>
-					<a
-						class="font-medium hover:text-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href={getBlogPermalink()}>Blog</a
-					>
+					<a class="tap-3 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-3.png" href="#">SALT LEEDS CITY</a>
 				</li>
-				<li class="md:hidden">
-					<a
-						class="font-bold hover:text-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href="https://github.com/onwidget/astrowind"
-						>Github
-					</a>
+				<li>
+					<a class="tap-4 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-4.png" href="#">SALT DEPTFORD</a>
+				</li>
+				<li>
+					<a class="tap-4 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-5.png" href="#">SALT WOOLWICH</a>
+				</li>
+				<li>
+					<a class="tap-4 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-6.png" href="#">SALT SHEFFIELD</a>
+				</li>
+				<li>
+					<a class="tap-4 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-7.png" href="#">SALT GRANARY WHARF</a>
+				</li>
+				<li>
+					<a class="tap-4 font-bold text-3xl hover:text-white px-4 py-6 inline-block transition" data-image="tap-8.png" href="#">SALT BOSTON SPA</a>
 				</li>
 			</ul>
 		</nav>
