@@ -27,10 +27,13 @@
 }
 
 .custom-cursor {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	width: 600px;
 	height: 400px;
-	transition: transform 0.3s ease-out;
+	pointer-events: none;
+	opacity: 0;
+	transition: transform 0.25s ease-out, opacity 0.25s ease;
 }

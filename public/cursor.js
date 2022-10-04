@@ -11,11 +11,12 @@ const moveCursor = (e) => {
 
 const handleCursorImage = (e) => {
   customCursor.style.backgroundImage = `url(/${e.target.dataset.image})`;
+  customCursor.style.opacity = 1;
 }
 
 menu.addEventListener('mouseleave', () => {
-  customCursor.style.backgroundImage = ``;
-})
+  customCursor.style.opacity = null;
+});
 
 menuLinks.forEach(link => link.addEventListener('mouseenter', handleCursorImage));
 
